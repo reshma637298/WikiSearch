@@ -1,34 +1,18 @@
-<!-- <div class="result">
-    <table>
-      <tr>
-        <th> TITLE</th>
-        <th> NEWS </th>
-        <th> WORD COUNT</th>
+<div class="outer-style">
+  <table class="table table-striped">
+    <thead>
+      <tr class="table-success">
+        <th class="table-info" scope="col">Title</th>
+        <th class="table-info" scope="col">Description</th>
+        <th class="table-info" scope="col">Word Count</th>
       </tr>
-      <tr *ngFor="let d of data">
-        <th>{{d.title}}</th>
-        <th [innerHTML]="d.snippet"></th>
-        <th> {{d.wordcount}}</th>
+    </thead>
+    <tbody>
+      <tr class="table-info" *ngFor="let d of data">
+        <td class="table-info" scope="col">{{ d.title }}</td>
+        <td class="table-info" scope="col" [innerHTML]="d.snippet"></td>
+        <td class="table-info" scope="col">{{ d.wordcount }}</td>
       </tr>
-    </table>
-  </div> -->
-
-  <div class="outer-style">
-    <table class="table table-striped">
-      <thead>
-        <tr class="table-success">
-          <th class="table-info" scope="col">Title</th>
-          <th class="table-info" scope="col">Description</th>
-          <th class="table-info" scope="col">Word Count</th>
-
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="table-info" *ngFor="let d of data">
-          <td class="table-info" scope="col">{{d.title}}</td>
-          <td class="table-info" scope="col" [innerHTML]="d.snippet"></td>
-          <td class="table-info" scope="col">{{d.wordcount}}</td>
-          </tr> 
-      </tbody>
-    </table>
-  </div>
+    </tbody>
+  </table>
+</div>
